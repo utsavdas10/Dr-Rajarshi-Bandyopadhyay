@@ -76,7 +76,6 @@
             <h2>About Me</h2>
             <div class="about-container">
                 <div class="about-image">
-                    <!-- IMPORTANT: Replace this placeholder with a real photo of yourself or your practice -->
                     <img src="images/about.jpg" alt="Dr. Rajarshi Bandyopadhyay in a professional medical setting">
                 </div>
                 <div class="about-content">
@@ -129,7 +128,7 @@
     </section>
 
     <!-- Clinics & Affiliations Section -->
-    <section id="clinics">
+    <section id="clinics" class="reveal">
             <div class="container">
                 <h2>My Clinics & Affiliations</h2>
                 <div class="clinic-grid">
@@ -183,34 +182,25 @@
                             <h4 class="title">Comparative evaluation between 2mm locking & 2mm non-locking miniplate system...</h4>
                             <span class="journal">Fortune Journal of Health Sciences, 2020</span>
                         </div>
-                        <!-- <a href="#" class="publication-link" aria-label="Read more about this publication">
-                            <i class="fas fa-arrow-right"></i> -->
-                        </a>
                     </div>
                     <div class="publication-item">
                         <div class="publication-content">
                             <h4 class="title">Management of Midface Fracture with Orbital Exenteration - A Case Report.</h4>
                             <span class="journal">IOSR Journal of Dental and Medical Sciences, 2022</span>
                         </div>
-                        <!-- <a href="#" class="publication-link" aria-label="Read more about this publication">
-                            <i class="fas fa-arrow-right"></i> -->
-                        </a>
                     </div>
                     <div class="publication-item">
                         <div class="publication-content">
                             <h4 class="title">Osteomyelitis In Mandible in A Case of Infantile Osteopetrosis: A Case Report.</h4>
                             <span class="journal">IOSR Journal of Dental and Medical Sciences, 2017</span>
                         </div>
-                        <!-- <a href="#" class="publication-link" aria-label="Read more about this publication">
-                            <i class="fas fa-arrow-right"></i> -->
-                        </a>
                     </div>
                 </div>
             </div>
         </section>
 </main>
 
-<!-- ★ NEW: Re-structured Footer -->
+<!-- Footer -->
 <footer id="contact">
     <div class="container footer-grid">
         <div class="footer-about">
@@ -238,7 +228,7 @@
     </div>
 </footer>
 
-<!-- ★ NEW: JavaScript for on-scroll animations -->
+<!-- JavaScript for on-scroll animations -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const revealElements = document.querySelectorAll('.reveal');
@@ -247,8 +237,6 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Optional: stop observing once it's visible
-                // revealObserver.unobserve(entry.target);
             }
         });
     }, {
