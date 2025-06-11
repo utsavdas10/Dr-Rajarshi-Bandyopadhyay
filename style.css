@@ -209,7 +209,7 @@ nav-menu a::after{
     height: 100%;
     background-color: var(--primary-blue);
     border-radius: var(--radius-lg);
-    right: 0;
+    right: 50;
     transform: translateX(20%);
 }
 
