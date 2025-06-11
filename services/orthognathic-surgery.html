@@ -27,11 +27,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- ★ CHANGED: Make sure this path is correct for your file structure -->
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-<!-- Header -->
+<!-- ★ This Header should automatically adopt the styles from your main style.css -->
 <header>
     <div class="container navbar">
         <a href="../index.html" class="nav-logo">Dr. Rajarshi <span>Bandyopadhyay</span></a>
@@ -46,91 +47,90 @@
 </header>
 
 <main>
-    <section class="service-detail-page">
-        <div class="service-banner">
-            <div class="container">
-                <span class="subtitle">Area of Expertise</span>
-                <h1>Orthognathic (Corrective Jaw) Surgery</h1>
-            </div>
+    <!-- ★ CHANGED: Renamed section class for better targeting -->
+    <section class="service-detail-hero">
+        <div class="container">
+            <!-- ★ CHANGED: Matched class names to main site's hero -->
+            <span class="subtitle">Area of Expertise</span>
+            <h1 class="hero-title">Orthognathic (Corrective Jaw) Surgery</h1>
+            <p class="service-intro">Transforming smiles and improving lives by correcting jaw misalignments to enhance function, comfort, and facial harmony.</p>
         </div>
+    </section>
 
-        <div class="container service-content-container">
+    <!-- ★ CHANGED: Renamed section class -->
+    <section class="service-detail-content">
+        <div class="container">
             <div class="service-content-grid">
                 <!-- Main Content Column -->
                 <div class="main-content">
                     <h2>What is Corrective Jaw Surgery?</h2>
                     
                     <figure class="content-image">
-                        <img src="https://placehold.co/350x250/2c5b85/ffffff?text=3D+Surgical+Plan" alt="3D virtual surgical planning for jaw surgery">
+                        <img src="https://images.unsplash.com/photo-1580281658223-9b93f18ae9ae?q=80&w=2070&auto=format&fit=crop" alt="3D virtual surgical planning for jaw surgery">
                         <figcaption>Advanced 3D planning ensures precision.</figcaption>
                     </figure>
 
-                    <p><strong>[PLACEHOLDER]</strong> Orthognathic surgery, also known as corrective jaw surgery, is a transformative procedure performed to correct a wide range of minor and major skeletal and dental irregularities, including the misalignment of jaws and teeth. It can significantly improve chewing, speaking, and breathing. While the patient's appearance may be dramatically enhanced as a result of the surgery, corrective jaw surgery is performed to correct functional problems.</p>
-                    <p><strong>[PLACEHOLDER]</strong> The procedure involves surgically repositioning the upper jaw (maxilla), lower jaw (mandible), or both, to create a more balanced, functional, and healthy relationship. We utilize state-of-the-art 3D virtual planning to ensure the highest degree of precision and to help you visualize the outcome before the procedure even begins.</p>
+                    <p>Orthognathic surgery, also known as corrective jaw surgery, is a transformative procedure performed to correct a wide range of minor and major skeletal and dental irregularities, including the misalignment of jaws and teeth. It can significantly improve chewing, speaking, and breathing. While the patient's appearance may be dramatically enhanced as a result of the surgery, corrective jaw surgery is performed to correct functional problems.</p>
+                    <p>The procedure involves surgically repositioning the upper jaw (maxilla), lower jaw (mandible), or both, to create a more balanced, functional, and healthy relationship. We utilize state-of-the-art 3D virtual planning to ensure the highest degree of precision and to help you visualize the outcome before the procedure even begins.</p>
                     
                     <hr class="content-divider">
 
-                    <h2>Key Benefits</h2>
+                    <h3>Key Benefits of Surgery</h3>
                     <ul>
                         <li>Balanced and more harmonious facial features</li>
                         <li>Improved function of the teeth and jaws</li>
-                        <li>Relief from chronic pain and discomfort</li>
-                        <li>Improved breathing and resolution of sleep apnea</li>
+                        <li>Relief from chronic jaw pain (TMJ) and discomfort</li>
+                        <li>Improved breathing and potential resolution of sleep apnea</li>
                         <li>Enhanced self-esteem and confidence</li>
                     </ul>
 
                     <hr class="content-divider">
 
-                    <h2>The Process & What to Expect</h2>
-                    <p><strong>[PLACEHOLDER]</strong> Your journey towards a healthier bite and balanced profile is a carefully planned process. It typically begins with a comprehensive consultation and may involve coordination with your orthodontist. Here is a summary of the steps involved.</p>
+                    <h3>The Process: From Planning to Recovery</h3>
+                    <p>Your journey towards a healthier bite and balanced profile is a carefully planned process. It typically begins with a comprehensive consultation and may involve coordination with your orthodontist. Here is a summary of the steps involved.</p>
                     
                     <div class="expandable-content">
                         <!-- This content is hidden by default -->
                         <div class="hidden-content">
                             <h4>Step 1: Initial Consultation & Planning</h4>
-                            <p><strong>[PLACEHOLDER]</strong> During your first visit, we will conduct a thorough examination, including X-rays, photos, and 3D scans of your head. Using this information, we perform Virtual Surgical Planning (VSP) to simulate the entire procedure on a computer, allowing us to plan the precise movements and achieve a predictable, optimal result. We will discuss the plan with you in detail, ensuring all your questions are answered.</p>
+                            <p>During your first visit, we will conduct a thorough examination, including X-rays, photos, and 3D scans of your head. Using this information, we perform Virtual Surgical Planning (VSP) to simulate the entire procedure on a computer, allowing us to plan the precise movements and achieve a predictable, optimal result. We will discuss the plan with you in detail, ensuring all your questions are answered.</p>
                             
-                            <figure class="content-image" style="float: left; margin-right: 20px; margin-left: 0;">
-                                <img src="https://placehold.co/350x250/2c5b85/ffffff?text=Post-Op+Care" alt="Patient recovering after surgery">
-                                <figcaption>Our team provides dedicated post-operative care.</figcaption>
-                            </figure>
-
                             <h4>Step 2: The Surgical Procedure</h4>
-                            <p><strong>[PLACEHOLDER]</strong> The surgery is performed in a hospital under general anesthesia. Most incisions are made inside the mouth to avoid visible facial scars. Depending on the case, we may reposition the upper jaw, lower jaw, and chin. The bones are held in their new position with small, biocompatible titanium plates and screws, which are designed to stay in place permanently beneath the gums.</p>
+                            <p>The surgery is performed in a hospital under general anesthesia. Most incisions are made inside the mouth to avoid visible facial scars. Depending on the case, we may reposition the upper jaw, lower jaw, and chin. The bones are held in their new position with small, biocompatible titanium plates and screws, which are designed to stay in place permanently beneath the gums.</p>
 
                             <h4>Step 3: Recovery & Post-Operative Care</h4>
-                            <p><strong>[PLACEHOLDER]</strong> After surgery, you will spend time in the recovery room and may stay in the hospital for a day or two. Swelling is a normal part of the healing process and typically peaks around the third day. We will provide you with a detailed guide for post-operative care, including instructions for a modified (liquid and soft food) diet, oral hygiene, and managing discomfort. The initial healing phase takes about 6 weeks, but complete healing continues for several months. Regular follow-up appointments will be scheduled to monitor your progress.</p>
+                            <p>After surgery, you will spend time in the recovery room and may stay in the hospital for a day or two. Swelling is a normal part of the healing process and typically peaks around the third day. We will provide you with a detailed guide for post-operative care, including instructions for a modified (liquid and soft food) diet, oral hygiene, and managing discomfort. The initial healing phase takes about 6 weeks, but complete healing continues for several months. Regular follow-up appointments will be scheduled to monitor your progress.</p>
                         </div>
-                        <button class="read-more-btn">Read More</button>
+                        <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
                     </div>
 
                     <hr class="content-divider">
 
-                    <!-- NEW IN-PAGE GALLERY SECTION -->
+                    <!-- In-Page Gallery Section -->
                     <div class="service-gallery">
                         <h3>Patient Results Gallery</h3>
-                        <p>Visual proof of the transformations possible with this procedure. All photos are of real patients with their consent.</p>
+                        <p>Examples of successful facial trauma reconstruction. All photos are of real patients with their consent.</p>
                         <div class="case-gallery-grid">
                             <!-- Case 1 -->
                             <div class="gallery-case">
                                 <div class="image-pair">
-                                    <div class="image-half"><img src="https://placehold.co/350x250/e0e0e0/000000?text=Before" alt="Before jaw surgery"><span class="image-label">Before</span></div>
-                                    <div class="image-half"><img src="https://placehold.co/350x250/e0e0e0/000000?text=After" alt="After jaw surgery"><span class="image-label">After</span></div>
+                                    <div class="image-half"><img src="https://placehold.co/350x250/e0e0e0/000000?text=Before" alt="Before cheekbone fracture repair"><span class="image-label">Before</span></div>
+                                    <div class="image-half"><img src="https://placehold.co/350x250/e0e0e0/000000?text=After" alt="After cheekbone fracture repair"><span class="image-label">After</span></div>
                                 </div>
                                 <div class="caption">
-                                    <h4>Case: Underbite Correction</h4>
-                                    <p>Surgical repositioning of the lower jaw to improve bite and facial profile.</p>
+                                    <h4>Case: Zygomatic Fracture Repair</h4>
+                                    <p>Surgical repair of a fractured cheekbone to restore facial symmetry and function.</p>
                                 </div>
                             </div>
                             <!-- Case 2 -->
                             <div class="gallery-case">
                                 <div class="image-pair">
-                                    <div class="image-half"><img src="https://placehold.co/350x250/e0e0e0/000000?text=Before" alt="Before jaw surgery"><span class="image-label">Before</span></div>
-                                    <div class="image-half"><img src="https://placehold.co/350x250/e0e0e0/000000?text=After" alt="After jaw surgery"><span class="image-label">After</span></div>
+                                    <div class="image-half"><img src="https://placehold.co/350x250/e0e0e0/000000?text=Before" alt="Before mandibular fracture repair"><span class="image-label">Before</span></div>
+                                    <div class="image-half"><img src="https://placehold.co/350x250/e0e0e0/000000?text=After" alt="After mandibular fracture repair"><span class="image-label">After</span></div>
                                 </div>
                                 <div class="caption">
-                                    <h4>Case: Open Bite Closure</h4>
-                                    <p>Corrective surgery to align upper and lower jaws, enabling proper closure.</p>
+                                    <h4>Case: Mandibular Fracture Repair</h4>
+                                    <p>Fixation of a broken lower jaw to restore a proper bite and alignment.</p>
                                 </div>
                             </div>
                         </div>
@@ -140,8 +140,8 @@
                 <!-- Sidebar Column -->
                 <aside class="sidebar">
                     <div class="sidebar-widget">
-                        <h4>Why Choose Dr. Bandyopadhyay?</h4>
-                        <p>With over 15 years of experience in oral and maxillofacial surgery, Dr. Rajarshi Bandyopadhyay is dedicated to providing personalized care and advanced surgical solutions. His expertise in orthognathic surgery is complemented by a compassionate approach, ensuring each patient feels supported throughout their journey.</p>
+                        <h4>Why Choose Me?</h4>
+                        <p>As a Gold Medalist surgeon specializing in complex facial procedures, I am dedicated to providing personalized care and advanced surgical solutions. My expertise in orthognathic surgery is complemented by a compassionate approach, ensuring you feel supported throughout your journey.</p>
                     </div>
                     <div class="sidebar-widget">
                         <h4>Patient Story</h4>
@@ -152,55 +152,49 @@
                             <cite>- Anjali K., Kolkata</cite>
                         </div>
                     </div>
-                    <!-- SECOND PATIENT STORY -->
                     <div class="sidebar-widget">
-                        <h4>Another Success Story</h4>
-                         <div class="testimonial-quote">
-                            <blockquote>
-                                "I was always self-conscious about my profile. Dr. Rajarshi not only fixed my bite but gave me the confidence I never had. The process was so smooth and the results are better than I ever imagined."
-                            </blockquote>
-                            <cite>- Rohan P., Howrah</cite>
-                        </div>
-                    </div>
-                     <div class="sidebar-widget">
                         <h4>Ready to Talk?</h4>
                         <p>Schedule a consultation to discuss your specific needs and goals.</p>
-                        <a href="../index.html#contact" class="cta-button sidebar-cta">Book a Consultation</a>
+                        <!-- ★ CHANGED: Matched CTA button class from main site -->
+                        <a href="../index.html#contact" class="cta-button">Book a Consultation</a>
                     </div>
                 </aside>
             </div>
         </div>
     </section>
+    
 </main>
 
-<!-- Footer -->
+<!-- ★ CHANGED: Removed duplicate footer and ensured this one matches the main site -->
 <footer id="contact">
-    <div class="container footer-content">
-        <h3>Contact Information</h3>
-        <p>For consultations, academic inquiries, or professional collaborations, please feel free to get in touch.</p>
-        <div class="footer-contact-info">
-            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 63 A/1 Dewanjee Street, P.O. Rishra; Pin: 712248</p>
-            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:+919088026404">+91 90880 26404</a></p>
-            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:rajarshi_bandyopadhyay@yahoo.com">rajarshi_bandyopadhyay@yahoo.com</a></p>
+    <div class="container footer-grid">
+        <div class="footer-about">
+            <a href="index.html" class="nav-logo">Dr. Rajarshi <span>Bandyopadhyay</span></a>
+            <p>Committed to providing the highest standard of surgical care in oral and maxillofacial health, blending expertise with compassion.</p>
         </div>
-        <div class="footer-bottom">© 2024 Dr. Rajarshi Bandyopadhyay. All Rights Reserved.</div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#clinics">Affiliations</a></li>
+                <li><a href="#publications">Publications</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Info</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 63 A/1 Dewanjee Street, Rishra - 712248</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+919088026404">+91 90880 26404</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:rajarshi_bandyopadhyay@yahoo.com">rajarshi_bandyopadhyay@yahoo.com</a></p>
+        </div>
     </div>
-
-    
-<!-- Footer -->
-<footer id="contact">
-    <div class="container footer-content">
-        <h3>Contact Information</h3>
-        <p>For consultations, academic inquiries, or professional collaborations, please feel free to get in touch.</p>
-        <div class="footer-contact-info">
-            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 63 A/1 Dewanjee Street, P.O. Rishra; Pin: 712248</p>
-            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:+919088026404">+91 90880 26404</a></p>
-            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:rajarshi_bandyopadhyay@yahoo.com">rajarshi_bandyopadhyay@yahoo.com</a></p>
-        </div>
-        <div class="footer-bottom">© 2024 Dr. Rajarshi Bandyopadhyay. All Rights Reserved.</div>
+    <div class="footer-bottom">
+        © 2024 Dr. Rajarshi Bandyopadhyay. All Rights Reserved.
     </div>
 </footer>
 
+<!-- ★ CHANGED: Make sure this path is correct for your file structure -->
 <script src="../script.js"></script>
+
 </body>
 </html>

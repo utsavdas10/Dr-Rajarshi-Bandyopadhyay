@@ -1,20 +1,42 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Select all "Read More" buttons
-    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // Existing script for on-scroll animations
+    const revealElements = document.querySelectorAll('.reveal');
+    if (revealElements.length > 0) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+    }
 
-    readMoreButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Find the ".hidden-content" div that is a sibling of the button's parent
-            const content = this.previousElementSibling;
-            
-            if (content && content.classList.contains('hidden-content')) {
-                // Toggle the display
-                const isHidden = window.getComputedStyle(content).display === 'none';
-                content.style.display = isHidden ? 'block' : 'none';
+    // --- NEW SCRIPT FOR SERVICE PAGE "READ MORE" BUTTON ---
+    const readMoreBtn = document.querySelector('.read-more-btn');
+    const hiddenContent = document.querySelector('.hidden-content');
 
-                // Change the button text
-                this.textContent = isHidden ? 'Read Less' : 'Read More';
+    if (readMoreBtn && hiddenContent) {
+        readMoreBtn.addEventListener('click', function() {
+            // Check if the content is currently shown
+            const isContentVisible = hiddenContent.style.display === 'block';
+
+            if (isContentVisible) {
+                // Hide it
+                hiddenContent.style.display = 'none';
+                this.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
+                this.classList.remove('expanded');
+            } else {
+                // Show it
+                hiddenContent.style.display = 'block';
+                this.innerHTML = 'Read Less <i class="fas fa-chevron-up"></i>';
+                this.classList.add('expanded');
             }
         });
-    });
+    }
 });
