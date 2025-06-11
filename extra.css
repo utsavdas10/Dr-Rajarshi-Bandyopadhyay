@@ -1,0 +1,127 @@
+/* --- Hero Section gradient blobs --- */
+#hero {
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    padding: 40px 0;
+    background-color: var(--bg-light);
+    position: relative; 
+    overflow: hidden; 
+}
+
+#hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative; 
+    z-index: 2;
+}
+
+/* Keyframe animation for the floating effect */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg) scale(1); }
+    50% { transform: translateY(-30px) rotate(15deg) scale(1.05); }
+    100% { transform: translateY(0px) rotate(0deg) scale(1); }
+}
+
+/* General styles for all blobs */
+#hero::before, #hero::after {
+    content: '';
+    position: absolute;
+    z-index: 0; 
+    animation: float 12s ease-in-out infinite;
+    /* ★ CHANGE: Made the blobs less subtle */
+    filter: blur(70px); /* Was 80px */
+    opacity: 0.9;       /* Was 0.7 */
+}
+
+/* The main teal blob, placed behind the image */
+#hero::before {
+    width: 450px;
+    height: 450px;
+    background: var(--primary-teal-bright);
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    top: 15%;
+    left: 55%;
+}
+
+/* The accent gold blob */
+#hero::after {
+    width: 250px;
+    height: 250px;
+    background: var(--accent-gold);
+    border-radius: 50% 50% 33% 67% / 62% 46% 54% 38%;
+    bottom: 10%;
+    right: 5%;
+    animation-duration: 9s; 
+    animation-delay: -3s; 
+}
+
+
+/* Content styles are already correct for a light theme */
+.hero-content { flex: 1.2; }
+.hero-content .subtitle { animation: fadeIn 1s ease-out 0.2s backwards; }
+.hero-content .hero-title { animation: fadeInUp 0.8s ease-out 0.4s backwards; }
+.hero-content p { animation: fadeInUp 0.8s ease-out 0.6s backwards; }
+.hero-content .subtitle { font-size: 1.1rem; font-weight: 600; color: var(--primary-teal-dark); margin-bottom: 1rem; display: block; }
+.hero-title { background: linear-gradient(45deg, var(--primary-teal-dark), var(--primary-teal-bright)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 1rem; }
+.hero-content p { font-size: 1.1rem; max-width: 500px; }
+
+
+.hero-image-container {
+    width: 380px;
+    height: 380px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    box-shadow: 0 15px 50px var(--shadow-medium);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    margin-left: 50px;
+    animation: fadeIn 1.2s ease-out 0.5s backwards;
+    position: relative;
+    padding: 10px;
+    background-color: var(--bg-white);
+}
+
+.hero-image-container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    background: linear-gradient(45deg, var(--primary-teal-bright), var(--accent-gold)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.hero-image-itself {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+.hero-image-container:hover { 
+    transform: scale(1.03); 
+    box-shadow: 0 25px 60px var(--shadow-medium); 
+}
+
+.cta-button {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: linear-gradient(45deg, var(--primary-teal-bright), var(--primary-teal-dark));
+    color: var(--bg-white); padding: 16px 32px; border-radius: 50px;
+    font-weight: 700; font-size: 1rem; margin-top: 2rem;
+    transition: all 0.3s ease; border: none;
+    box-shadow: 0 5px 15px rgba(0, 169, 169, 0.4);
+}
+.cta-button:hover {
+    color: var(--bg-white);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 169, 169, 0.5), 0 0 20px 5px rgba(212, 175, 55, 0.3);
+}
+.cta-button i { transition: transform 0.3s ease; }
+.cta-button:hover i { transform: translateX(5px); }
