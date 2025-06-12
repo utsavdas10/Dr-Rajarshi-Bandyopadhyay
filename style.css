@@ -210,7 +210,7 @@ nav-menu a::after{
     background-color: var(--primary-blue);
     border-radius: var(--radius-lg);
     right: 50;
-    transform: translateX(20%);
+    transform: translate3d(8%, 5%, 0);
 }
 
 #hero .hero-image {
@@ -289,7 +289,7 @@ nav-menu a::after{
     left: 8px;
     top: 5px;
     bottom: 5px;
-    width: 3px;
+    width: 4px;
     /* The gradient from your site's blue to a professional gold */
     background: linear-gradient(to bottom, var(--primary-blue), #D4AF37);
     border-radius: 3px;
@@ -317,24 +317,46 @@ nav-menu a::after{
     color: var(--text-light);
 }
 
-/* Kept the original style for the "Experience" column */
 .roles-list {
     list-style: none;
-}
-.roles-list li {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-.roles-list i {
-    color: var(--primary-blue);
-    font-size: 1.2rem;
-    width: 20px;
-    text-align: center;
+    padding: 0;
 }
 
+.roles-list li {
+    margin-bottom: 1.6rem;
+}
+
+.role-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0rem;
+}
+
+.role-header i {
+    color: var(--primary-blue);
+    margin-right: 10px;
+    font-size: 1.6rem ;
+    width: 20px;
+    padding-top: 0.6rem;
+}
+
+.role-header h4 {
+    margin: 0;
+    color: var(--text-dark) ;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-left: 1.1rem;
+}
+
+.role-description {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-left: 30px;
+    line-height: 1.4;
+    display: block;
+    padding-left: 1.1rem;
+}
 
 /* =================================================== */
 /* ============== 4. EXPERTISE SECTION =============== */
@@ -474,9 +496,10 @@ nav-menu a::after{
     left: 0;
     top: 0;
     bottom: 0;
-    width: 6px; /* Thickness of the border */
+    width: 8px; /* Thickness of the border */
     background: linear-gradient(180deg, var(--primary-blue), #d4af37);
 }
+
 
 .clinic-info h4 {
     font-family: var(--font-heading);
@@ -511,7 +534,7 @@ nav-menu a::after{
 .publication-item {
     background: var(--white);
     padding: 1.5rem 2rem;
-    border-radius: var(--radius-md);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     position: relative;
@@ -523,12 +546,12 @@ nav-menu a::after{
 .publication-item::before {
     content: '';
     position: absolute;
-    top: 15px;
-    bottom: 15px;
+    top: 0;
+    bottom: 0;
     left: 0;
-    width: 4px;
+    width: 8px;
     background: linear-gradient(to bottom, var(--primary-blue), #D4AF37);
-    border-radius: 24px;
+    /* border-radius: 24px; */
 }
 
 .publication-item:hover {
